@@ -25,4 +25,12 @@ export const TWEETS: ITweet[] = [
     author: 'vite_ninja',
     text: 'Vite is so fast it makes me suspicious. Like… how?'
   },
+    {
+    author: 'vite',
+    text: 'Vite is so fast it makes me suspicious. Like… how?'
+  },
+    {
+    author: 'ninja',
+    text: 'Vite is so fast it makes me suspicious. Like… how?'
+  },
 ];

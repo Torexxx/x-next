@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -8,28 +8,25 @@ const geistSans = Geist({
   display: 'swap'
 });
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-  display: 'swap'
-});
-
 export const metadata: Metadata = {
-  title: "X App",
+  title: {
+    template: '%s - X App',
+    default: ''
+  },
   description: "Front-end insights, styled like X.com",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="bg-[var(--background)] text-[var(--foreground)]" 
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={`${geistSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
