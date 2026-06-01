@@ -1,3 +1,3 @@
 export const PAGES = {
-    PROFILE: (username: string) => `/u/${username}`
-}
+  PROFILE: (username: string) => `/u/${username}`,
+};
